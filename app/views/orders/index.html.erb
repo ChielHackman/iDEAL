@@ -1,0 +1,12 @@
+<p>
+  Ruby on Rails book
+</p>
+<p>
+  Price: €5,00
+</p>
+
+<%= form_for @order do |f| %>
+  <%= f.hidden_field :price, :value => 500 %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+  <%= f.submit "Order!" %>
+<% end %>
